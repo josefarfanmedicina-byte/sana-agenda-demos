@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Muestra preparada — no es sitio oficial</title>
+<meta name="description" content="Muestra de diseño de uso privado.">
+<meta name="robots" content="noindex,nofollow">
+<meta name="theme-color" content="#1B1B1B">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%230E7C86%27/%3E%3Cpath d=%27M16 8v16M8 16h16%27 stroke=%27white%27 stroke-width=%273.5%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="demo-bar hidden" id="demoBar">VERSIÓN DEMO · Perfil, servicios y citas son datos de ejemplo, no reales</div>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="topbar">
+      <a class="brand" href="#top"><i id="brandIni">S</i><span id="brandName"></span></a>
+      <nav><a href="#servicios">Servicios</a><a href="#reservar">Reservar</a></nav>
+    </div>
+    <div class="profile">
+      <div class="avatar" id="avatar"></div>
+      <div><h1 id="pNombre"></h1><div class="spec" id="pEsp"></div></div>
+    </div>
+    <p class="tagline" id="pTag"></p>
+    <div class="chips" id="chips"></div>
+    <div class="cta-row">
+      <a class="btn btn-primary" href="#reservar">Reservar cita</a>
+      <a class="btn btn-ghost" id="heroWa" target="_blank" rel="noopener">Escribir por WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main class="wrap" id="top">
+  <section class="about"><div class="card"><h2>Sobre mí</h2><p id="pBio"></p></div></section>
+
+  <section id="servicios">
+    <h2>Servicios</h2>
+    <p class="sub">Elige el que necesitas y reserva en menos de un minuto.</p>
+    <div class="services" id="servicesList"></div>
+  </section>
+
+  <section id="reservar">
+    <h2>Reserva tu cita</h2>
+    <p class="sub" id="bookSub"></p>
+    <div class="card" id="booking" aria-live="polite"></div>
+  </section>
+  <section id="ubicacion" class="hidden"><h2>Ubicación</h2><div class="card" id="ubicBox"></div></section>
+  <section id="galeria" class="hidden"><h2>Galería</h2><div class="gallery" id="galBox"></div></section>
+  <section id="faq" class="hidden"><h2>Preguntas frecuentes</h2><div id="faqBox"></div></section>
+  <section id="redes" class="hidden"><h2>Redes</h2><div class="chips-dark" id="redBox"></div></section>
+</main>
+
+<footer class="wrap">
+  <p id="footAddr"></p>
+  <p style="margin-top:8px" id="footBrand">Sitio con reserva online por <b>SANA Agenda 24/7</b> · <a href="panel.html" id="panelLink">Panel de citas</a></p>
+  <p style="margin-top:8px;display:none" id="privBox"></p>
+  <p style="margin-top:8px">Este sitio no solicita información clínica. Usa solo tu nombre, teléfono y un motivo general.</p>
+</footer>
+<a class="fab" id="fab" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+
+<script src="config.js"></script>
+<script src="common.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
