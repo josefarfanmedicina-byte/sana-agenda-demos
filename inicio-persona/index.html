@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SANA · Inicio (prototipo con datos ficticios)</title>
+<meta name="robots" content="noindex,nofollow">
+<meta name="description" content="Prototipo de pantalla con datos ficticios.">
+<meta name="theme-color" content="#F6F9F8">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 32 32%27%3E%3Crect width=%2732%27 height=%2732%27 rx=%278%27 fill=%27%231F6B5B%27/%3E%3Cpath d=%27M16 8v16M8 16h16%27 stroke=%27white%27 stroke-width=%273.5%27 stroke-linecap=%27round%27/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="proto" role="note">Prototipo con datos ficticios</div>
+
+<main class="wrap" id="top">
+  <header class="head">
+    <p class="brand"><i aria-hidden="true">S</i> SANA</p>
+    <h1>Hola, José</h1>
+    <p class="tag">Tu salud, más clara</p>
+  </header>
+
+  <section class="next" id="siguiente" aria-labelledby="t-next">
+    <p class="eyebrow" id="t-next">Tu siguiente paso</p>
+    <h2 class="step" id="paso">Tomar losartán 50 mg</h2>
+    <p class="when">Hoy · 8:00 p. m.</p>
+    <button class="btn-primary" id="btn-hecho" type="button">Marcar como hecho</button>
+    <div class="done-row" id="hecho-row" hidden>
+      <p class="done-txt" id="hecho-txt" role="status">✓ Hecho · registrado por ti</p>
+      <button class="btn-text" id="btn-deshacer" type="button">Deshacer</button>
+    </div>
+    <p class="note" id="nota-hecho" hidden>Solo guarda que tú lo marcaste; no confirma una toma real.</p>
+    <p class="fict">Ejemplo ficticio</p>
+  </section>
+
+  <section class="sec" aria-labelledby="t-cita">
+    <h3 id="t-cita">Próxima cita</h3>
+    <div class="line">
+      <div><p class="main-l">Martes 6 oct · 4:30 p. m.</p><p class="sub-l">Dr. José Farfán</p></div>
+      <a class="btn-sec" id="ver-cita" href="#cita">Ver cita</a>
+    </div>
+    <div class="sheet" id="cita" hidden>
+      <p class="eyebrow">Tu cita (ejemplo)</p>
+      <p class="main-l">Martes 6 oct · 4:30 p. m.</p>
+      <p class="sub-l">Dr. José Farfán</p>
+      <a class="btn-text" id="cerrar-cita" href="#top">Cerrar</a>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="t-plan">
+    <h3 id="t-plan">Tu plan</h3>
+    <div class="line">
+      <p class="main-l" id="plan-txt">2 de 4 pasos completados</p>
+      <a class="btn-sec" id="abrir-plan" href="#plan">Abrir plan</a>
+    </div>
+    <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="4" aria-valuenow="2" aria-label="Pasos completados" id="bar"><i id="bar-fill"></i></div>
+    <p class="hint" id="plan-hint" role="status" hidden>El plan completo llegará pronto.</p>
+  </section>
+
+  <section class="sec last" aria-labelledby="t-act">
+    <h3 id="t-act">Actividad reciente</h3>
+    <ul class="act">
+      <li><span>Resultado de glucosa recibido</span><time>30 sep</time></li>
+      <li><span>Consulta de medicina general realizada</span><time>24 sep</time></li>
+    </ul>
+  </section>
+</main>
+
+<div class="toast" id="toast" role="status" aria-live="polite" hidden>Próximamente</div>
+
+<nav class="tabs" aria-label="Navegación principal">
+  <a class="tab on" href="#top" aria-current="page" data-tab="inicio">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg><span>Inicio</span></a>
+  <button class="tab" type="button" data-tab="salud">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 017-2.6A4 4 0 0119 10c0 5.6-7 10-7 10z"/></svg><span>Mi salud</span></button>
+  <button class="tab" type="button" data-tab="citas">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16v15H4z"/><path d="M4 10h16"/><path d="M8 3v4"/><path d="M16 3v4"/></svg><span>Citas</span></button>
+  <button class="tab" type="button" data-tab="perfil">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-7 8-7s8 2.6 8 7"/></svg><span>Perfil</span></button>
+</nav>
+<script src="app.js"></script>
+</body>
+</html>
