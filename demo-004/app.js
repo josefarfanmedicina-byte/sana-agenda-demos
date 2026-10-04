@@ -35,7 +35,7 @@
   q("pBio").textContent = P.bio;
   q("footAddr").textContent = P.ubicacion ? "📍 " + P.ubicacion : "";
   if (C.panel === false) q("panelLink").remove();
-  if (C.sitio && C.sitio.pie) q("footBrand").innerHTML = esc(C.sitio.pie);
+  if (C.sitio && C.sitio.pie) q("footBrand").innerHTML = esc(C.sitio.pie).replace(/&lt;(\/?)b&gt;/g, "<$1b>"); // el pie admite solo <b>…</b>; todo lo demás sigue escapado
   q("bookSub").textContent = T.sub;
   if (SOL) { document.querySelector(".hero .btn-primary").textContent = "Solicitar cita"; document.querySelector("#reservar h2").textContent = "Solicita tu cita"; }
   q("avatar").innerHTML = P.foto ? '<img alt="' + esc(P.nombre) + '" src="' + esc(P.foto) + '">' : esc(P.iniciales || "");
