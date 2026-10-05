@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>SANA Agenda — Tus pacientes reservan solos por WhatsApp</title>
+<meta name="description" content="Escribe el nombre de tu consultorio y mira en 30 segundos una demo de agenda donde tus pacientes piden cita y tú ves tus solicitudes. Datos de ejemplo, sin registro.">
+<link rel="canonical" href="https://josefarfanmedicina-byte.github.io/sana-agenda-demos/crea-tu-demo/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://josefarfanmedicina-byte.github.io/sana-agenda-demos/crea-tu-demo/">
+<meta property="og:title" content="Tus pacientes reservan solos por WhatsApp — SANA Agenda">
+<meta property="og:description" content="Mira tu agenda en 30 segundos: escribe el nombre de tu consultorio y prueba una demo con datos de ejemplo.">
+<meta property="og:image" content="https://josefarfanmedicina-byte.github.io/sana-agenda-demos/crea-tu-demo/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_PE">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Tus pacientes reservan solos por WhatsApp — SANA Agenda">
+<meta name="twitter:description" content="Mira tu agenda en 30 segundos con una demo de ejemplo.">
+<meta name="twitter:image" content="https://josefarfanmedicina-byte.github.io/sana-agenda-demos/crea-tu-demo/og.png">
+<meta name="theme-color" content="#1C4F44">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <span class="brand">SANA Agenda</span>
+    <h1>Tus pacientes reservan solos por WhatsApp. Mira tu agenda en 30 segundos</h1>
+    <p class="lead">Escribe el nombre de tu consultorio y prueba cómo un paciente pide cita y cómo tú ves tus solicitudes.</p>
+  </div>
+</header>
+<main class="wrap">
+  <section class="card form-card" aria-labelledby="t-form">
+    <h2 id="t-form">Crea tu demo</h2>
+    <form id="f" novalidate>
+      <label for="n">Nombre del consultorio</label>
+      <input id="n" name="n" type="text" maxlength="60" autocomplete="organization" placeholder="Ej. Consultorio Salud Clara" required>
+      <div class="err" id="en" aria-live="polite"></div>
+      <label for="e">Especialidad</label>
+      <select id="e" name="e"></select>
+      <div id="otra-box" hidden>
+        <label for="o">¿Cuál?</label>
+        <input id="o" name="o" type="text" maxlength="40" placeholder="Ej. Podología">
+        <div class="err" id="eo" aria-live="polite"></div>
+      </div>
+      <fieldset>
+        <legend>Modalidad</legend>
+        <div class="seg">
+          <label><input type="radio" name="m" value="presencial"><span>Presencial</span></label>
+          <label><input type="radio" name="m" value="online"><span>Online</span></label>
+          <label><input type="radio" name="m" value="ambas" checked><span>Ambas</span></label>
+        </div>
+      </fieldset>
+      <button class="btn btn-pri full" id="crear" type="submit">Ver mi demo</button>
+      <p class="priv">🔒 No guardamos nada: tu demo se arma en tu navegador y vive solo en el link.</p>
+    </form>
+  </section>
+
+  <section class="card result" id="resultado" hidden aria-live="polite" aria-labelledby="t-res">
+    <h2 id="t-res">Tu demo está lista</h2>
+    <p class="sub">Demo de <b id="res-nombre"></b> con datos de ejemplo.</p>
+    <label for="link">Link de tu demo</label>
+    <input id="link" type="text" readonly>
+    <div class="actions">
+      <a class="btn btn-pri" id="abrir" href="demo/" target="_blank" rel="noopener">Abrir mi demo</a>
+      <button class="btn btn-out" id="copiar" type="button">Copiar link</button>
+      <button class="btn btn-out" id="compartir" type="button" hidden>Compartir</button>
+    </div>
+    <p class="ok" id="copiado" aria-live="polite"></p>
+  </section>
+
+  <section class="how" aria-labelledby="t-how">
+    <h2 id="t-how">Qué vas a ver</h2>
+    <ol>
+      <li><b>Tu paciente elige</b> servicio, día y hora (horarios de ejemplo).</li>
+      <li><b>Deja su solicitud</b> y recibe la confirmación por WhatsApp.</li>
+      <li><b>Tú la ves</b> ordenada por día y hora en “Ver como administración”.</li>
+    </ol>
+  </section>
+
+  <section class="cta" aria-labelledby="t-cta">
+    <h2 id="t-cta">¿Te gustaría tenerlo de verdad?</h2>
+    <a class="btn btn-wa full" id="wa" href="https://wa.me/51930319029?text=Hola%20Dr.%20Jos%C3%A9%2C%20quiero%20SANA%20Agenda%20en%20mi%20consultorio." target="_blank" rel="noopener">Quiero esto en mi consultorio</a>
+    <p class="sig">Dr. José Farfan, médico</p>
+  </section>
+</main>
+<footer class="foot">Las demos usan datos de ejemplo. Nada se guarda en servidores.</footer>
+<script src="shared.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
